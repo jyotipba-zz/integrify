@@ -1,4 +1,4 @@
-ta## Task 1
+## Task 1
 
 '''Write functional programming code to apply a list of functions on
 a list of integers. Explain how it works
@@ -12,9 +12,10 @@ def square(a):
 
 functions = [add, square]
 number = [2,3,4,5]
+
 for num in number:
     result = map(lambda x : x(num), functions )
-    print(result)
+    print(list(result))
 
 ''' It is related to functional programing because
 there is not change in original lists,  i.e even though
