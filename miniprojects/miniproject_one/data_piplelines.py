@@ -19,7 +19,7 @@ args = parser.parse_args()
 df = pd.DataFrame({'a':[1,5,np.nan, np.nan], 'b':[1,5,np.nan, 4],'c':[1,np.nan,6, 4]})
 
 axis = 1
-kwargs = {'input_':'df','step_1':pd.DataFrame.dropna, 'arg_1':{'axis':axis,'thresh':args.small},
+kwargs = {'input_':df,'step_1':pd.DataFrame.dropna, 'arg_1':{'axis':axis,'thresh':args.small},
     'step_2':pd.DataFrame.dropna, 'arg_2':{'axis':1,'thresh':args.medium},
 'step_3':pd.DataFrame.dropna, 'arg_3':{'axis':1,'thresh':args.large}}
 print(args.small, args.medium, args.large)
